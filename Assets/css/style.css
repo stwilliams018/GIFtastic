@@ -3,14 +3,19 @@ form,
 input {
   margin: 10px;
 }
-.container {
-    margin-right: 0;
-    margin-left: 0;
-  
-    > .col,
-    > [class*="col-"] {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
+
+img {
+  height: 200px;
+  width: 200px;
+
+}
+.bandDisp {
+  float: right
+
+}
+Body {
+  background-image: url("Emotions.png");
+  background-size: 90em
+}
+
 

@@ -15,19 +15,22 @@
     </head>
     <body>
         <div class="container">
-            <div class="jumbotron">
-              <h1 class="text-center">GIFtastic</h1><br/>
-              <h2 class="text-center">Click on a button below to display GIFs for the Selected Category</h2>
+            <div class="jumbotron jumbotron-fluid">
+                <h1 class="text-center">GIFtastic Emotions</h1>
+                <h2 class="text-center">Click on a button below to display GIFs for       the Selected Category</h2>
             </div>
-            <div id="buttons-view"></div>
-            <form id="band-form"></form>
-                <label for="band-input">Add a Band</label>
-                <input type="text" id="band-input">
+            <div id="mainBody">
+                <div id="buttons-view"></div>
+                <form id="band-form"></form>
+                    <label for="band-input">Add an Emotion</label>
+                    <input type="text" id="band-input">
+                    <br>
+                    <input id="add-band" type="submit" value="Submit">
+                </form>
+                <div>
+                    <div id="bandDiv"></div>
+                </div>
                 <br>
-                <input id="add-band" type="submit" value="Submit">
-            </form>
-            <div>
-                <div id="bandDiv"></div>
             </div>
         </div>
 

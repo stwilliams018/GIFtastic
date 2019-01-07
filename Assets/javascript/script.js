@@ -1,4 +1,4 @@
-var Bands = ["Grateful Dead", "Phish", "WSP", "String Cheese", "Umphrey's McGee", "Allman Bros", "Devil  Makes Three","Donna the Buff","Lotus"]
+var Bands = ["Joy", "Sadness", "Anger", "Fear", "Surprise", "Shame", "Pity","Love","Hate", "Random Emotion"]
 
 
 
@@ -35,24 +35,22 @@ $("#add-band").on("click", function(event) {
         url: queryURL,
         method: "GET"
       }).then(function(response) {
-        //var data = response;
-        //var output =
-        
-        
-        
-        
-        console.log(response);
+       console.log(response);
+       
+       for (var i = 0; i < 10; i++){
+
         var band = $("<div class='bandDisp'>");
-        var rating = response.data[0].rating;
+        var imgURL = response.data[i].images.original.url;
+        var image = $("<img class='i'>").attr("src", imgURL);
+        band.append(image);
+        var rating = response.data[i].rating;
         var pOne = $("<p>").text("Rating: " + rating);
         band.append(pOne);
-        var imgURL = response.data[0].images.original.url;
-        var image = $("<img>").attr("src", imgURL);
-        band.append(image);
         $("#bandDiv").prepend(band);
-
- });
-
+      
+       }
+    });
+    
 
 $(document).on("click", ".band-btn", displayGIF);
 event.preventDefault();
