@@ -1,10 +1,4 @@
-
-
-
-
-
-
-var Bands = ["Joy", "Sadness", "Anger", "Fear", "Surprise", "Shame", "Pity","Love","Hate","Happy","Anticipation","Trust", "Random Emotion"]
+var Bands = ["Joy", "Sadness", "Anger", "Fear", "Surprise", "Shame", "Pity","Love","Hate","Happy","Anticipation","Trust",]
 
 
 
@@ -59,6 +53,6 @@ $("#add-band").on("click", function(event) {
     
 
 $(document).on("click", ".band-btn", displayGIF);
-event.preventDefault();
+
   }})
 
