@@ -1,4 +1,10 @@
-var Bands = ["Joy", "Sadness", "Anger", "Fear", "Surprise", "Shame", "Pity","Love","Hate", "Random Emotion"]
+
+
+
+
+
+
+var Bands = ["Joy", "Sadness", "Anger", "Fear", "Surprise", "Shame", "Pity","Love","Hate","Happy","Anticipation","Trust", "Random Emotion"]
 
 
 
