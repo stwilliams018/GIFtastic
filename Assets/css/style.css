@@ -5,8 +5,8 @@ input {
 }
 
 img {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 
 }
 .bandDisp {
@@ -86,6 +86,9 @@ h1{
   text-emphasis: bold;
   font-size: 25px;
 }
- 
+.gif {
+  border: 2px solid black;
+  margin: 3px
+}
 
 

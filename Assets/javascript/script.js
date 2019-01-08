@@ -1,11 +1,24 @@
 var Bands = ["Joy", "Sadness", "Anger", "Fear", "Surprise", "Shame", "Pity","Love","Hate","Happy","Anticipation","Trust",]
 
 
-
 $( document ).ready(function(){
-            renderButtons();
+    renderButtons();
 
 $(document).on("click", ".band-btn", displayGIF);
+
+$(document).on("click", ".gif", function() {
+  var state = $(this).attr("data-state");
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+
+    console.log(state)
+  }
+});
+
 
 function renderButtons() {
 $("#buttons-view").empty();
@@ -41,14 +54,22 @@ $("#add-band").on("click", function(event) {
 
         var band = $("<div class='bandDisp'>");
         var imgURL = response.data[i].images.original.url;
-        var image = $("<img class='i'>").attr("src", imgURL);
+        var imgURLStill = response.data[i].images.original_still.url;
+        //var imgState = '"' + imgURL+ '"' + " " + "data-still=" + '"' + imgURL + '"' + " " + "data-animate=" + '"' + imgURL + '"'
+        var image = $("<img>").attr({ src : imgURLStill , "data-animate" : imgURL , "data-still": imgURLStill , "data-state" : "still" , "class" : "gif"});
         band.append(image);
         var rating = response.data[i].rating;
         var pOne = $("<p>").text("Rating: " + rating);
         band.append(pOne);
         $("#bandDiv").prepend(band);
-      
+
+        //console.log(imgState);
+        console.log(imgURL);
+        console.log(imgURLStill);
+        console.log(image)
+        
        }
+
     });
     
 
